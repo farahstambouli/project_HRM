@@ -86,6 +86,29 @@ exports.registerAdmin = async (req, res) => {
       res.status(500).send('Server error');
     }
   };
+  //get all department
+  exports.getAllDepartments = async (req, res) => {
+    try {
+      const departments = await Department.find().sort({ name: 1 });
+      res.json(departments);
+    } catch (err) {
+      console.error(err.message);
+      res.status(500).send('Server error');
+    }
+  };
+  //delete department
+  exports.deleteDepartment = async (req, res) => {
+    try {
+        const department = await Department.findByIdAndDelete(req.params.id);
+        if (!department) {
+            return res.status(404).json({ msg: 'Department not found' });
+        }
+        res.json({ msg: 'Department removed' });
+    } catch (err) {
+        console.error(err.message);
+        res.status(500).send('Server error');
+    }
+};
 
 
   //add manager profile

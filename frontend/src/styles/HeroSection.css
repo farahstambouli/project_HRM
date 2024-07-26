@@ -1,0 +1,13 @@
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+  }
+  
+  .hero-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+  }
+  

@@ -1,0 +1,26 @@
+/* src/styles/LoginSignUpButtons.css */
+
+.login-signup-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+  }
+  
+  .login-button, .signup-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .signup-button {
+    background-color: #28a745;
+  }
+  
+  .login-button:hover, .signup-button:hover {
+    opacity: 0.8;
+  }
+  

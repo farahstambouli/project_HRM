@@ -1,14 +1,15 @@
 const express = require('express');
 const router = express.Router();
-const {registerAdmin , loginAdmin,getAdmin,addManager,addDepartment,loginManager,updateManager ,deleteManager,addEmployee,loginEmployee,updateEmployee,deleteEmployee,getAllManagers,getAllEmployees} = require('../controllers/admincontrollers');
+const {registerAdmin , loginAdmin,getAdmin,addManager,addDepartment,getAllDepartments,loginManager,updateManager ,deleteManager,addEmployee,loginEmployee,updateEmployee,deleteEmployee,getAllManagers,getAllEmployees} = require('../controllers/admincontrollers');
 const authMiddleware = require('../middleware/authMiddleware');
 
 //routes for the admin
 router.post('/register', registerAdmin);
 router.post('/login', loginAdmin);
 router.get('/currentAdmin', authMiddleware ,getAdmin);
-//add department
-router.post('/add', addDepartment);
+// //add department
+// router.post('/add', addDepartment);
+// router.get('/allDeparts', getAllDepartments)
 //routes for the manager
 router.post('/registermanager', addManager);
 router.post('/loginmanager', loginManager);

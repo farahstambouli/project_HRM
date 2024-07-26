@@ -1,7 +1,20 @@
-//so in here we put everything that is gonna be in the global state, so we can access it from any component
-//in the authSlice we are gonne put the user that is connected to the plateform
-//anything that is not global we will put locally using useState
+// src/App/authSlice.js
 
-//the user we are gonna store it in the "database" so we can authenticate the user later on
+import { createSlice } from '@reduxjs/toolkit';
 
+const authSlice = createSlice({
+  name: 'auth',
+  initialState: { token: null },
+  reducers: {
+    loginSuccess: (state, action) => {
+      state.token = action.payload;
+    },
+    logout: (state) => {
+      state.token = null;
+    },
+  },
+});
 
+export const { loginSuccess, logout } = authSlice.actions;
+
+export default authSlice.reducer;

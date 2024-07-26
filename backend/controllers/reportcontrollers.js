@@ -28,47 +28,115 @@ exports.submitReport = async (req, res) => {
       res.status(500).send('Server error');
     }
   };
-
-  //Allows an admin to retrieve all reports in the system.
-  exports.getAllReports = async (req, res) => {
-    try {
-        const reports = await Report.find();
-        res.json(reports);
-    } catch (err) {
-        console.error(err.message);
-        res.status(500).send('Server error');
-    }
+// Retrieve all reports
+exports.getAllReports = async (req, res) => {
+  try {
+    const reports = await Report.find().populate('employeeId', 'name');
+    res.json(reports);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server error');
+  }
 };
+// Retrieve reports by manager
+// exports.getReportsByManager = async (req, res) => {
+//   try {
+//     const { managerId } = req.params;
+//     const reports = await Report.find({ senderId: managerId, senderModel: 'Manager' }).populate('employeeId', 'name');
+//     res.json(reports);
+//   } catch (err) {
+//     console.error(err.message);
+//     res.status(500).send('Server error');
+//   }
+// };
+exports.getReportsByManager = async (req, res) => {
+  try {
+    const { managerId } = req.params;
+    console.log('Request params:', req.params);
+    console.log(`Fetching reports for managerId: ${managerId}`);
+    
+    const reports = await Report.find({ senderId: managerId, senderModel: 'Manager' }).populate('employeeId', 'name');
+    
+    console.log('Reports found:', reports);
+    res.json(reports);
+  } catch (err) {
+    console.error('Error fetching reports by manager:', err.message);
+    res.status(500).send('Server error');
+  }
+};
+
+exports.getReportsByEmployee = async (req, res) => {
+  try {
+    const { employeeId } = req.params;
+    console.log('Request params:', req.params);
+    console.log(`Fetching reports for employeeId: ${employeeId}`);
+    
+    const reports = await Report.find({ employeeId }).populate('employeeId', 'name');
+    
+    console.log('Reports found:', reports);
+    res.json(reports);
+  } catch (err) {
+    console.error('Error fetching reports by employee:', err.message);
+    res.status(500).send('Server error');
+  }
+};
+
+
+// Retrieve reports received by the logged-in user
+exports.getReceivedReports = async (req, res) => {
+  try {
+    const reports = await Report.find({ receiverId: req.user.id, receiverModel: req.user.role }).populate('senderId', 'name');
+    res.json(reports);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server error');
+  }
+};
+
+
+
+
+
+//   //Allows an admin to retrieve all reports in the system.
+//   exports.getAllReports = async (req, res) => {
+//     try {
+//         const reports = await Report.find();
+//         res.json(reports);
+//     } catch (err) {
+//         console.error(err.message);
+//         res.status(500).send('Server error');
+//     }
+// };
 
   //Allows an admin to retrieve all reports submitted by a specific manager.
-  exports.getReportsByManager = async (req, res) => {
-    try {
-        const { managerId } = req.params;
-        const reports = await Report.find({ senderId: managerId, senderModel: 'Manager' });
-        res.json(reports);
-    } catch (err) {
-        console.error(err.message);
-        res.status(500).send('Server error');
-    }
-};
-  //Allows a manager or an admin to retrieve all reports related to a specific employee.
-  exports.getReportsByEmployee = async (req, res) => {
-    try {
-        const { employeeId } = req.params;
-        const reports = await Report.find({ employeeId });
-        res.json(reports);
-    } catch (err) {
-        console.error(err.message);
-        res.status(500).send('Server error');
-    }
-};
-  //Allows a manager or an admin to retrieve all reports they have received.
-  exports.getReceivedReports = async (req, res) => {
-    try {
-        const reports = await Report.find({ receiverId: req.user.id, receiverModel: req.user.role });
-        res.json(reports);
-    } catch (err) {
-        console.error(err.message);
-        res.status(500).send('Server error');
-    }
-};
+//   exports.getReportsByManager = async (req, res) => {
+//     try {
+//         const { managerId } = req.params;
+//         const reports = await Report.find({ senderId: managerId, senderModel: 'Manager' });
+//         res.json(reports);
+//     } catch (err) {
+//         console.error(err.message);
+//         res.status(500).send('Server error');
+//     }
+// };
+//   //Allows a manager or an admin to retrieve all reports related to a specific employee.
+//   exports.getReportsByEmployee = async (req, res) => {
+//     try {
+//         const { employeeId } = req.params;
+//         const reports = await Report.find({ employeeId });
+//         res.json(reports);
+//     } catch (err) {
+//         console.error(err.message);
+//         res.status(500).send('Server error');
+//     }
+// };
+//   //Allows a manager or an admin to retrieve all reports they have received.
+//   exports.getReceivedReports = async (req, res) => {
+//     try {
+//         const reports = await Report.find({ receiverId: req.user.id, receiverModel: req.user.role });
+//         res.json(reports);
+//     } catch (err) {
+//         console.error(err.message);
+//         res.status(500).send('Server error');
+//     }
+// };

@@ -1,0 +1,35 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin: 0 1rem;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .logo img {
+    height: 40px;
+  }
+  
+  .login-signup-buttons {
+    display: flex;
+  }
+  
+  .login-btn, .signup-btn {
+    margin: 0 0.5rem;
+  }
+  

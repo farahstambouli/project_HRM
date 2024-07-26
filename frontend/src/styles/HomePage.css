@@ -1,0 +1,11 @@
+.hero {
+  background: url('../assets/images/hero-background.jpeg') no-repeat center center;
+  background-size: cover;
+  height: 300px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+}
+
