@@ -15,6 +15,8 @@ import ManageReports from './pages/admin/ManageReport';
 import LoginAdmin from './components/LoginAdmin';
 import LoginManager from './components/LoginManager';
 import SelectUserType from './components/LoginForm';
+import ManageEmployeesM from './pages/manager/ManageEmployeeM';
+import ManageReportM from './pages/manager/ManageReportM';
 // import Navigation from './components/Navigation';
 
 const App = () => {
@@ -35,14 +37,16 @@ const App = () => {
 
 
            <Route path="/admin/dashboard" element={<AdminDashboard />} />
-           <Route path="/manager/dashboard" element={<ManagerDashboard />} />
-
-
-
+         
            <Route path="/admin/managers" element={<ManageManagers />} /> 
            <Route path="/admin/departments" element={<ManageDepartments />} />
            <Route path="/admin/employees" element={<ManageEmployees />} />
            <Route path="/admin/reports" element={<ManageReports />} />
+
+           <Route path="/manager/dashboard" element={<ManagerDashboard />} />
+           <Route path="/manager/employees" element={<ManageEmployeesM />} />
+           <Route path="/manager/reports" element={<ManageReportM />} />
+
 
           {/* <Route path="/admin/dashboard" element={token ? <AdminDashboard /> : <Navigate to="/login" />} /> */}
           {/* <Route path="/" element={<Navigate to="/login" />} /> */}

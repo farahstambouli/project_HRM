@@ -10,7 +10,6 @@ const LoginManager = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-
     try {
       const response = await axios.post('http://localhost:3000/manager/loginmanager', { email, password });
       setToken(response.data.token);
@@ -19,7 +18,6 @@ const LoginManager = () => {
       console.error('Failed to login:', error.response ? error.response.data : error.message);
     }
   };
-
   return (
     <form onSubmit={handleLogin}>
       <h2>Manager Login</h2>

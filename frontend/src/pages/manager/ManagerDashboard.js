@@ -20,7 +20,7 @@ const ManagerDashboard = () => {
       }
 
       try {
-        const response = await axios.get('http://localhost:3000/manager/loginmanage', {
+        const response = await axios.get('http://localhost:3000/profile/profile', {
           headers: {
             'x-auth-token': `${token}`,
           },
@@ -50,7 +50,9 @@ const ManagerDashboard = () => {
       <div>
       <ul>
           <li>
-            <Link to="/manager/employee">Manage Employees</Link><br />
+            <Link to="/manager/employees">Manage Employees</Link><br />
+            <Link to="/manager/reports">Manage Reports</Link><br />
+
             {/* <Link to="/admin/departments">Manage Departments</Link><br />
             <Link to="/admin/employees">Manage Employees</Link><br />
             <Link to="/admin/reports">Handle Reports</Link><br /> */}
