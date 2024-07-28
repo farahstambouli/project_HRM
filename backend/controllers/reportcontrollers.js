@@ -38,6 +38,39 @@ exports.getAllReports = async (req, res) => {
     res.status(500).send('Server error');
   }
 };
+
+// // Filter reports by sender name
+// exports.getReportsBySenderName = async (req, res) => {
+//   try {
+//     const senderName = req.query.name;
+//     const reports = await Report.find().populate({
+//       path: 'senderId',
+//       match: { name: senderName }
+//     });
+//     res.json(reports.filter(report => report.senderId !== null));
+//   } catch (error) {
+//     res.status(500).json({ error: 'Server error' });
+//   }
+// };
+
+// // Filter reports by employee name
+// exports.getReportsByEmployeeName = async (req, res) => {
+//   try {
+//     const employeeName = req.query.name;
+//     const reports = await Report.find().populate({
+//       path: 'employeeId',
+//       match: { name: employeeName }
+//     });
+//     res.json(reports.filter(report => report.employeeId !== null));
+//   } catch (error) {
+//     res.status(500).json({ error: 'Server error' });
+//   }
+// };
+
+
+
+
+
 // Retrieve reports by manager
 // exports.getReportsByManager = async (req, res) => {
 //   try {

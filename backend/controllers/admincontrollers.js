@@ -350,3 +350,14 @@ exports.getAllEmployees = async (req, res) => {
   }
 };
 
+//get all admin users profile
+
+exports.getAllAdmins = async (req, res) => {
+  try {
+    const admins = await Admin.find().select('-password'); // Exclude the password
+    res.json(admins);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server error');
+  }
+};
