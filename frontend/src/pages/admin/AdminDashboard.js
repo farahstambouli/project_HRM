@@ -82,7 +82,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { getToken, removeToken } from '../../helpers/auth';
 import { useNavigate, Link } from 'react-router-dom';
-import Navbar from '../../components/Navbar';
+// import Navbar from '../../components/Navbar';
+import NavDash from '../../components/NavDash';
 import ManageManagers from './ManageManagers';
 import ManageDepartments from './ManageDepartments';
 import ManageEmployee from './ManageEmployee';
@@ -145,7 +146,7 @@ const AdminDashboard = () => {
 
   return (
     <div>
-      <Navbar /> {/* Include the Navbar component */}
+      <NavDash /> {/* Include the Navbar component */}
       <div className="admin-dashboard">
         <div className="sidebar">
           <h2>Admin Dashboard</h2>

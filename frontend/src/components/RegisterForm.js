@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import '../styles/RegisterPage.css'; // Ensure the path is correct
+import Navbar from './Navbar';
+
 
 
 const RegisterForm = () => {
@@ -28,6 +30,7 @@ const RegisterForm = () => {
 
   return (
     <div className="register-container">
+      <Navbar/>
     <div className="register-card">
       <h2>Register</h2>
       <form onSubmit={handleRegister}>

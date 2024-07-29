@@ -2,10 +2,14 @@
 
 import React from 'react';
 import '../../styles/ContactPage.css';
+import Navbar from '../../components/Navbar';
+
 
 const ContactPage = () => {
   return (
+    
     <div className="contact-container">
+      <Navbar/>
       <div className="contact-card">
         <h1>Contact Us</h1>
         <p>If you need any help or have any questions, please feel free to reach out to us. We are here to assist you!</p>

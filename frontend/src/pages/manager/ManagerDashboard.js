@@ -6,9 +6,14 @@ import { getToken, removeToken } from '../../helpers/auth';
 import { useNavigate } from 'react-router-dom';
 import {Link} from 'react-router-dom';
 import '../../styles/AdminDashboard.css';
-import Navbar from '../../components/Navbar';
+// import Navbar from '../../components/Navbar';
+import NavDash from '../../components/NavDash';
+
 import ManageEmployeesM from './ManageEmployeeM'; 
 import ManageReports from './ManageReportM';
+
+import '../../styles/AdminDashboard.css';
+
 
 
 
@@ -66,7 +71,7 @@ const ManagerDashboard = () => {
 
   return (
     <div>
-    <Navbar /> {/* Include the Navbar component */}
+    <NavDash /> {/* Include the Navbar component */}
     <div className="admin-dashboard">
       <div className="sidebar">
         <h2>Admin Dashboard</h2>

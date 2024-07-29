@@ -1,0 +1,74 @@
+/* NavDash.css */
+
+.navbar {
+  position: fixed; /* Fixes the navbar at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Space out left and right items */
+  align-items: center;
+  background: #ffffff; /* Background color of the navbar */
+  padding: 10px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for effect */
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 20px; /* Space between logo and links */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  margin: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+.nav-right {
+  display: flex;
+  gap: 10px;
+  margin-right: 40px;
+}
+
+.nav-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #007bff;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none; /* Remove the border */
+  transition: background-color 0.3s, transform 0.3s;
+  cursor: pointer; /* Ensure the button has a pointer cursor */
+}
+
+.nav-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+  transform: translateY(-2px);
+}
+
+
+  

@@ -5,12 +5,15 @@ import '../../styles/AboutPage.css';
 import teamMember1 from '../../assets/images/team-member1.jpeg'; // Ensure you have the images in the assets folder
 import teamMember2 from '../../assets/images/team-member2.jpeg';
 import teamMember3 from '../../assets/images/team-member3.jpeg';
+import Navbar from '../../components/Navbar';
+
 // src/pages/HomePage/AboutPage.jsx
 
 
 const AboutPage = () => {
   return (
     <div className="about-container">
+      <Navbar/>
       <div className="about-page">
         <div className="about-hero">
           <h1>About Us</h1>
