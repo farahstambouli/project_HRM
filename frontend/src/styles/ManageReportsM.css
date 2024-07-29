@@ -1,0 +1,187 @@
+/* Container for the Manage Reports section */
+/* .manage-reports-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+    min-height: 100vh;
+    padding: 20px;
+    margin-top: 50px; 
+  }
+  
+
+  .manage-reports-container h2 {
+    font-size: 32px; 
+    margin-bottom: 20px;
+  }
+  
+
+  .manage-reports-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+  }
+  
+
+  .manage-reports-container form div {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  
+  .manage-reports-container form label {
+    font-size: 18px;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .manage-reports-container form input,
+  .manage-reports-container form select,
+  .manage-reports-container form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+
+  .manage-reports-container form button {
+    font-size: 18px;
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .manage-reports-container form button:hover {
+    background: #0056b3;
+  }
+  
+
+  .manage-reports-container .reports-list {
+    list-style: none; 
+    padding: 0;
+    width: 100%;
+    max-width: 800px; 
+    text-align: left; 
+    margin-top: 20px;
+  }
+  
+
+  .manage-reports-container .report-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+
+  .loading {
+    font-size: 24px; 
+    color: #666;
+    text-align: center;
+  }
+  
+
+  .manage-reports-container .filter-section {
+    margin-top: 20px;
+  }
+  
+  .manage-reports-container .filter-section h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .manage-reports-container .filter-section div {
+    margin-bottom: 15px;
+  }
+   */
+
+
+   .manage-reports-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+  
+  .report-form-card, .reports-list-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    width: 80%;
+  }
+  
+  .report-form-card h2, .reports-list-card h3 {
+    margin-top: 0;
+  }
+  
+  .report-form-card form div {
+    margin-bottom: 15px;
+  }
+  
+  .report-form-card label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .report-form-card input, .report-form-card select, .report-form-card textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .report-form-card button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .report-form-card button:hover {
+    background-color: #0056b3;
+  }
+  
+  .reports-list-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .reports-list-card li {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+  
+  .reports-list-card li:last-child {
+    border-bottom: none;
+  }
+  
+  .report-item div {
+    margin-bottom: 8px;
+  }
+  
+  .report-item strong {
+    display: inline-block;
+    width: 80px;
+  }
+  

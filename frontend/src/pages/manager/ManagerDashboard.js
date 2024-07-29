@@ -5,9 +5,17 @@ import axios from 'axios';
 import { getToken, removeToken } from '../../helpers/auth';
 import { useNavigate } from 'react-router-dom';
 import {Link} from 'react-router-dom';
+import '../../styles/AdminDashboard.css';
+import Navbar from '../../components/Navbar';
+import ManageEmployeesM from './ManageEmployeeM'; 
+import ManageReports from './ManageReportM';
+
+
 
 const ManagerDashboard = () => {
   const [managerInfo, setManagerInfo] = useState(null);
+  const [currentView, setCurrentView] = useState('dashboard');
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -40,27 +48,40 @@ const ManagerDashboard = () => {
   if (!managerInfo) {
     return <div>Loading...</div>;
   }
+  const renderView = () => {
+    switch (currentView) {
+      case 'manageEmployees':
+        return <ManageEmployeesM />;
+      case 'ManageReports':
+        return <ManageReports />;
+      default:
+        return (
+          <div>
+            <h1>Welcome, {managerInfo.name}</h1>
+            <p>Email: {managerInfo.email}</p>
+          </div>
+        );
+    }
+  };
 
   return (
     <div>
-      <h1>Welcome, {managerInfo.name}</h1>
-      <p>Email: {managerInfo.email}</p>
-      {/* Add more manager info or components here */}
-      {/* //div for the managerment of the employee */}
-      <div>
-      <ul>
-          <li>
-            <Link to="/manager/employees">Manage Employees</Link><br />
-            <Link to="/manager/reports">Manage Reports</Link><br />
-
-            {/* <Link to="/admin/departments">Manage Departments</Link><br />
-            <Link to="/admin/employees">Manage Employees</Link><br />
-            <Link to="/admin/reports">Handle Reports</Link><br /> */}
-          </li>
-          {/* Add more links for other management components here */}
+    <Navbar /> {/* Include the Navbar component */}
+    <div className="admin-dashboard">
+      <div className="sidebar">
+        <h2>Admin Dashboard</h2>
+        <ul>
+          {/* <li><button onClick={() => setCurrentView('manageManagers')}>Manage Managers</button></li>
+          <li><button onClick={() => setCurrentView('manageDepartments')}>Manage Departments</button></li> */}
+          <li><button onClick={() => setCurrentView('manageEmployees')}>Manage Employees</button></li>
+          <li><button onClick={() => setCurrentView('ManageReports')}>Manaage Reports</button></li>
         </ul>
       </div>
+      <div className="main-content">
+        {renderView()}
+      </div>
     </div>
+  </div>
   );
 };
 

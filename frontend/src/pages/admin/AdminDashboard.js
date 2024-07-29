@@ -153,7 +153,7 @@ const AdminDashboard = () => {
             <li><button onClick={() => setCurrentView('manageManagers')}>Manage Managers</button></li>
             <li><button onClick={() => setCurrentView('manageDepartments')}>Manage Departments</button></li>
             <li><button onClick={() => setCurrentView('manageEmployees')}>Manage Employees</button></li>
-            <li><button onClick={() => setCurrentView('generateReports')}>Manaage Reports</button></li>
+            <li><button onClick={() => setCurrentView('generateReports')}>Manage Reports</button></li>
           </ul>
         </div>
         <div className="main-content">

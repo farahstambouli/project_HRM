@@ -42,6 +42,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { getToken, removeToken } from '../../helpers/auth';
 import { useNavigate } from 'react-router-dom';
+import  '../../styles/ManageEmployeesM.css'
 
 const ManageEmployeesM = () => {
   const [employees, setEmployees] = useState([]);
@@ -79,14 +80,22 @@ const ManageEmployeesM = () => {
   }
 
   return (
-    <div>
-      <h1>Manage Employees</h1>
-      <ul>
-        {employees.map((employee) => (
-          <li key={employee._id}>{employee.name}</li>
-        ))}
-      </ul>
-    </div>
+    // <div>
+    //   <h1>Manage Employees</h1>
+    //   <ul>
+    //     {employees.map((employee) => (
+    //       <li key={employee._id}>{employee.name}</li>
+    //     ))}
+    //   </ul>
+    // </div>
+    <div className="manage-employees-container">
+    <h1>Manage Employees</h1>
+    <ul className="employees-list">
+      {employees.map((employee) => (
+        <li key={employee._id} className="employee-item">{employee.name}</li>
+      ))}
+    </ul>
+  </div>
   );
 };
 
