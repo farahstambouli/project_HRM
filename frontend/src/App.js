@@ -2,10 +2,10 @@
 
 import React from 'react';
 import { Route, Routes ,Navigate} from 'react-router-dom';
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 import AdminDashboard from './pages/admin/AdminDashboard';
 import ManagerDashboard from './pages/manager/ManagerDashboard';
-import LoginForm from './components/LoginForm';
+// import LoginForm from './components/LoginForm';
 import RegisterForm from './components/RegisterForm';
 import HomePage from './pages/HomePage/HomePage';
 import ManageManagers from './pages/admin/ManageManagers'; 
@@ -17,17 +17,21 @@ import LoginManager from './components/LoginManager';
 import SelectUserType from './components/LoginForm';
 import ManageEmployeesM from './pages/manager/ManageEmployeeM';
 import ManageReportM from './pages/manager/ManageReportM';
-// import Navigation from './components/Navigation';
+import AboutPage from './pages/HomePage/AboutPage';
+import ContactPage from './pages/HomePage/ContactPage';
+
 
 const App = () => {
-  const { token } = useSelector((state) => state.auth);
+  // const { token } = useSelector((state) => state.auth);
 
   return (
     
       <div>
-        {/* <Navigation /> */}
+       
         <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage/>} />
+        <Route path="/contact" element={<ContactPage/>} />
           <Route path="/register" element={<RegisterForm />} />
           <Route path="/login" element={<SelectUserType />} />
            {/* <Route path="/login" element={<LoginForm />} /> */}
@@ -47,9 +51,6 @@ const App = () => {
            <Route path="/manager/employees" element={<ManageEmployeesM />} />
            <Route path="/manager/reports" element={<ManageReportM />} />
 
-
-          {/* <Route path="/admin/dashboard" element={token ? <AdminDashboard /> : <Navigate to="/login" />} /> */}
-          {/* <Route path="/" element={<Navigate to="/login" />} /> */}
         </Routes>
       </div>
  
@@ -58,25 +59,5 @@ const App = () => {
 
 export default App;
 
-// import React from 'react';
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import RegisterForm from './components/RegisterForm';
-// import LoginForm from './components/LoginForm';
-// import AdminDashboard from './pages/admin/AdminDashboard';
-
-// const App = () => {
-//   return (
-//     <Router>
-//       <Routes>
-//         <Route path="/register" element={<RegisterForm />} />
-//         <Route path="/login" element={<LoginForm />} />
-//         <Route path="/dashboard" element={<AdminDashboard />} />
-//         {/* Add other routes as needed */}
-//       </Routes>
-//     </Router>
-//   );
-// };
-
-// export default App;
 
 

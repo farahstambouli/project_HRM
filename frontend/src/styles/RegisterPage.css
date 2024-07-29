@@ -1,0 +1,57 @@
+/* src/styles/RegisterPage.css */
+
+.register-container {
+    background: url('../assets/images/aboutusbackground.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .register-card {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for floating effect */
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .register-card h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .register-card label {
+    display: block;
+    margin: 10px 0 5px;
+  }
+  
+  .register-card input,
+  .register-card select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .register-card button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 1.1em;
+    border-radius: 4px;
+    width: 100%;
+  }
+  
+  .register-card button:hover {
+    background-color: #0056b3;
+  }
+  

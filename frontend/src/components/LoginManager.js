@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { setToken } from '../helpers/auth';
+import '../styles/ManagerLoginPage.css'; // Ensure the path is correct
+
 
 const LoginManager = () => {
   const [email, setEmail] = useState('');
@@ -19,18 +21,22 @@ const LoginManager = () => {
     }
   };
   return (
-    <form onSubmit={handleLogin}>
-      <h2>Manager Login</h2>
-      <div>
-        <label>Email:</label>
-        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+    <div className="manager-login-container">
+      <div className="manager-login-card">
+        <h2>Manager Login</h2>
+        <form onSubmit={handleLogin}>
+          <div>
+            <label>Email:</label>
+            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+          </div>
+          <div>
+            <label>Password:</label>
+            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+          </div>
+          <button type="submit">Login</button>
+        </form>
       </div>
-      <div>
-        <label>Password:</label>
-        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-      </div>
-      <button type="submit">Login</button>
-    </form>
+    </div>
   );
 };
 

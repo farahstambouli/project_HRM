@@ -1,0 +1,82 @@
+/* src/styles/ContactPage.css */
+
+.contact-container {
+    background: url('../assets/images/aboutusbackground.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .contact-card {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for floating effect */
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+  }
+  
+  .contact-card h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .contact-card p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-form label {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1em;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .contact-form input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 1.1em;
+    border-radius: 4px;
+  }
+  
+  .contact-form input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  .contact-info {
+    font-size: 1.1em;
+  }
+  
+  .contact-info p {
+    margin-bottom: 10px;
+  }
+  
+  .contact-info a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  .contact-info a:hover {
+    text-decoration: underline;
+  }
+  

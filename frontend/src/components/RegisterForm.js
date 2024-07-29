@@ -3,6 +3,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import '../styles/RegisterPage.css'; // Ensure the path is correct
+
 
 const RegisterForm = () => {
   const [name, setName] = useState('');
@@ -25,29 +27,33 @@ const RegisterForm = () => {
   };
 
   return (
-    <form onSubmit={handleRegister}>
+    <div className="register-container">
+    <div className="register-card">
       <h2>Register</h2>
-      <div>
-        <label>Name:</label>
-        <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
-      </div>
-      <div>
-        <label>Email:</label>
-        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-      </div>
-      <div>
-        <label>Password:</label>
-        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-      </div>
-      <div>
-        <label>Role:</label>
-        <select value={role} onChange={(e) => setRole(e.target.value)}>
-          <option value="admin">Admin</option>
-          <option value="manager">Manager</option>
-        </select>
-      </div>
-      <button type="submit">Register</button>
-    </form>
+      <form onSubmit={handleRegister}>
+        <div>
+          <label>Name:</label>
+          <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
+        </div>
+        <div>
+          <label>Email:</label>
+          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+        </div>
+        <div>
+          <label>Password:</label>
+          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+        </div>
+        <div>
+          <label>Role:</label>
+          <select value={role} onChange={(e) => setRole(e.target.value)}>
+            <option value="admin">Admin</option>
+            <option value="manager">Manager</option>
+          </select>
+        </div>
+        <button type="submit">Register</button>
+      </form>
+    </div>
+  </div>
   );
 };
 

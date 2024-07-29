@@ -1,0 +1,116 @@
+/* src/styles/AboutPage.css */
+
+.about-container {
+  background: url('../assets/images/aboutusbackground.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.about-page {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow for better floating effect */
+  padding: 20px;
+  max-width: 1200px;
+  width: 100%;
+  backdrop-filter: blur(10px); /* Optional: Adds a blur effect to the background behind the transparent container */
+}
+
+.about-hero {
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.about-hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.about-hero p {
+  font-size: 1.2em;
+}
+
+.about-section {
+  margin-bottom: 40px;
+}
+
+.about-section h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #007BFF;
+}
+
+.about-section p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.about-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.about-section ul li {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.team-section {
+  background-color:rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.team-members {
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  margin: 10px;
+  flex: 1;
+  min-width: 250px;
+}
+
+.team-member img {
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.team-member h3 {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+
+.team-member p {
+  font-size: 1em;
+  color: #666;
+}
+
+.contact-section {
+  background-color:rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.contact-section a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
