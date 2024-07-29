@@ -222,6 +222,8 @@
 // export default ManageReports;
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import '../../styles/ManageReports.css'; // Import the CSS file for modal and button styles
+
 
 const ManageReports = () => {
   const [reports, setReports] = useState([]);
@@ -340,7 +342,8 @@ const ManageReports = () => {
   // };
 
   return (
-    <div>
+    <div className="manage-reports-container">
+    <div className="report-form-card">
       <h2>Manage Reports</h2>
       <form onSubmit={handleSubmitReport}>
         <div>
@@ -402,25 +405,8 @@ const ManageReports = () => {
         </div>
         <button type="submit">Submit Report</button>
       </form>
-      <div>
-        <h3>Filter Reports</h3>
-        <div>
-          {/* <label>Filter by Sender:</label>
-          <input
-            type="text"
-            placeholder="Sender ID"
-            onChange={(e) => handleFilterBySender(e.target.value)}
-          /> */}
-        </div>
-        <div>
-          {/* <label>Filter by Employee:</label>
-          <input
-            type="text"
-            placeholder="Employee ID"
-            onChange={(e) => handleFilterByEmployee(e.target.value)}
-          /> */}
-        </div>
-      </div>
+    </div>
+    <div className="reports-list-card">
       <h3>All Reports</h3>
       {isFetching ? (
         <p>Loading...</p>
@@ -428,8 +414,16 @@ const ManageReports = () => {
         <ul>
           {reports.length > 0 ? (
             reports.map((report) => (
-              <li key={report._id}>
-                <strong>Type:</strong> {report.type} - <strong>Details:</strong> {report.details} - <strong>Date:</strong> {new Date(report.date).toLocaleDateString()}
+              <li key={report._id} className="report-item">
+                <div>
+                  <strong>Type:</strong> {report.type}
+                </div>
+                <div>
+                  <strong>Details:</strong> {report.details}
+                </div>
+                <div>
+                  <strong>Date:</strong> {new Date(report.date).toLocaleDateString()}
+                </div>
               </li>
             ))
           ) : (
@@ -438,6 +432,7 @@ const ManageReports = () => {
         </ul>
       )}
     </div>
+  </div>
   );
 };
 
