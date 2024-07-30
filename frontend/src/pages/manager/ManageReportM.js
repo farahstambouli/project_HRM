@@ -298,7 +298,7 @@ const ManageReports = () => {
         employeeId,
         receiverId,
         receiverModel,
-        senderId,
+        // senderId,
         senderModel
       }, {
         headers: {
@@ -310,7 +310,7 @@ const ManageReports = () => {
       setEmployeeId('');
       setReceiverId('');
       setReceiverModel('Admin');
-      setSenderId('');
+      // setSenderId('');
       setSenderModel('Manager');
       fetchReports();
     } catch (error) {
@@ -363,7 +363,7 @@ const ManageReports = () => {
             ))}
           </select>
         </div>
-        <div>
+        {/* <div>
           <label>Sender:</label>
           <input
             type="text"
@@ -372,7 +372,7 @@ const ManageReports = () => {
             placeholder="Sender ID"
             required
           />
-        </div>
+        </div> */}
         <div>
           <label>Sender Role:</label>
           <select value={senderModel} onChange={(e) => setSenderModel(e.target.value)} required>
