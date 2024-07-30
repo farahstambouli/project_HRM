@@ -46,13 +46,13 @@ const RegisterForm = () => {
           <label>Password:</label>
           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
         </div>
-        <div>
+        {/* <div>
           <label>Role:</label>
           <select value={role} onChange={(e) => setRole(e.target.value)}>
             <option value="admin">Admin</option>
             <option value="manager">Manager</option>
           </select>
-        </div>
+        </div> */}
         <button type="submit">Register</button>
       </form>
     </div>
