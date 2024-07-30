@@ -12,7 +12,7 @@ exports.submitReport = async (req, res) => {
     
     try {
       const newReport = new Report({
-        senderId: senderId || req.user.id, // Use provided senderId or fall back to req.user.id
+        // senderId: senderId || req.user.id, // Use provided senderId or fall back to req.user.id
         senderModel: senderModel || req.user.role, // Use provided senderModel or fall back to req.user.role
         receiverId,
         receiverModel,

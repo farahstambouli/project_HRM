@@ -3,11 +3,11 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const ReportSchema = new Schema({
-  senderId: {
-    type: Schema.Types.ObjectId,
-    refPath: 'senderModel',
-    required: true,
-  },
+  // senderId: {
+  //   type: Schema.Types.ObjectId,
+  //   refPath: 'senderModel',
+  //   required: true,
+  // },
   senderModel: {
     type: String,
     required: true,
