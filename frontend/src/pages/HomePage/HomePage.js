@@ -4,6 +4,8 @@ import HeroSection from '../../components/HeroSection';
 import Footer from '../../components/Footer';
 import '../../styles/HomePage.css'; // Correct path to HomePage.css
 
+// this part of the project is the home page where i imporeted the components i need for the home
+
 const HomePage = () => {
   return (
     

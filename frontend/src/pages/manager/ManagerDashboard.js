@@ -22,7 +22,7 @@ const ManagerDashboard = () => {
   const [currentView, setCurrentView] = useState('dashboard');
 
   const navigate = useNavigate();
-
+// fonction to fetch manager profile information in order to display them on his dashboard
   useEffect(() => {
     const fetchManagerInfo = async () => {
       const token = getToken();

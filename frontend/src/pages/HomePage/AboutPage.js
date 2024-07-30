@@ -1,4 +1,5 @@
 // src/pages/HomePage/AboutPage.jsx
+//tell the clients more about our services
 
 import React from 'react';
 import '../../styles/AboutPage.css';

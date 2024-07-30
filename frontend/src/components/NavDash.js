@@ -1,3 +1,5 @@
+// this navbar is for the dashboard view of admin or manager
+//whats different is the logout button instead of the login button and register button
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import '../styles/NavDash.css'; // Ensure this path is correct

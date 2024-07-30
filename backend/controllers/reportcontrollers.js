@@ -1,6 +1,9 @@
+//: Allows a manager or an admin to submit a report about an employee or a situation.
+//i did it in another file as it seems wastful to do the report part for each admin and manager
+//it made more sense to do a fonction where the report depend on the sender or the receiver 
 const Report = require('../models/Report');
 
-//: Allows a manager or an admin to submit a report about an employee or a situation.
+
 //submit the report
 exports.submitReport = async (req, res) => {
     const { type, details, employeeId, receiverId, receiverModel, senderId, senderModel } = req.body;
@@ -39,6 +42,8 @@ exports.getAllReports = async (req, res) => {
   }
 };
 
+
+//this filter fonction needs to be reviewed to be fonctional in the future 
 // // Filter reports by sender name
 // exports.getReportsBySenderName = async (req, res) => {
 //   try {
@@ -128,7 +133,7 @@ exports.getReceivedReports = async (req, res) => {
 
 
 
-
+//this commented functions need to be reviewed dependincg on the preferred situations
 
 //   //Allows an admin to retrieve all reports in the system.
 //   exports.getAllReports = async (req, res) => {

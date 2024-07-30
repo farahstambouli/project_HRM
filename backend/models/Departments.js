@@ -1,4 +1,4 @@
-
+//schema for the department
 const mongoose = require('mongoose');
 
 const departmentSchema = new mongoose.Schema({

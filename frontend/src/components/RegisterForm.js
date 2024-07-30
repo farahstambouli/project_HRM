@@ -1,5 +1,5 @@
 // src/components/RegisterForm.js
-
+//this component will be used to register the very first admin of the company or more users(mainly admins)
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -7,7 +7,7 @@ import '../styles/RegisterPage.css'; // Ensure the path is correct
 import Navbar from './Navbar';
 
 
-
+//fonction that handle the registration
 const RegisterForm = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');

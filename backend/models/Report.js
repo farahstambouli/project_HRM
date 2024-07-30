@@ -1,3 +1,4 @@
+//schema for the report
 // models/Report.js
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;

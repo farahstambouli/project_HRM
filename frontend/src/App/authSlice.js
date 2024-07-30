@@ -1,5 +1,5 @@
 // src/App/authSlice.js
-
+// this slice is here to handle the reducer of the user
 import { createSlice } from '@reduxjs/toolkit';
 
 const authSlice = createSlice({

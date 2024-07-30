@@ -1,17 +1,4 @@
-// import React from 'react';
-// import '../styles/HeroSection.css';
-
-// const HeroSection = () => {
-//   return (
-//     <section className="hero">
-//       <img src="path/to/hero-image.jpg" alt="Hero" className="hero-image" />
-//     </section>
-//   );
-// };
-
-// export default HeroSection;
-
-// HeroSection.jsx
+// This component is the hero section of the landing page. It contains the main heading and a call-to-action button.
 
 import React from 'react';
 import '../styles/HeroSection.css'; // Ensure this path matches your directory structure

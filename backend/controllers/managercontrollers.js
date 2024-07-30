@@ -1,28 +1,13 @@
-
+//this is the manager controller
+///for now: he can view the employee under him and view his profile
+//can add more fonctionalities down the road
 const Manager = require('../models/Manager');
 const Employee = require('../models/Employees');
 const Admin = require('../models/Admin');
 
 // get all employees under a manager
-
 exports.getEmployeesUnderManager = async (req, res) => {
-  // try {
-  //   const managerId = req.params.id;
-    
-
-  //   // Find the manager by ID and populate the team field with employee details
-  //   const manager = await Manager.findById(managerId).populate('team');
-
-  //   if (!manager) {
-  //     return res.status(404).json({ msg: 'Manager not found' });
-  //   }
-
-  //   // Return the list of employees under this manager
-  //   res.json(manager.team);
-  // } catch (err) {
-  //   console.error(err.message);
-  //   res.status(500).send('Server error');
-  // }
+ 
   try {
     // Access manager ID from the request object
     const managerId = req.manager.id;
@@ -39,18 +24,6 @@ exports.getEmployeesUnderManager = async (req, res) => {
     res.status(500).json({ message: error.message });
 }
 };
-
-//get employee under manager with only the token
-  // exports.getEmployeeUnderManager = async (req, res) => {
-  //   try {
-  //     const managerId = req.user.id; // Assuming your token payload includes the manager ID
-  //     const employees = await Employee.find({ manager: managerId }); // Adjust the query to match your schema
-  //     res.json(employees);
-  //   } catch (error) {
-  //     res.status(500).json({ message: 'Server Error', error });
-  //   }
-  // };
-
 
 
 //get manager profile

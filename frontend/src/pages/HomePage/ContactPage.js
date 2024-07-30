@@ -1,5 +1,5 @@
 // src/pages/ContactPage/ContactPage.jsx
-
+//contains the way the client can contact us
 import React from 'react';
 import '../../styles/ContactPage.css';
 import Navbar from '../../components/Navbar';

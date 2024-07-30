@@ -1,3 +1,4 @@
+//schema for the employee
 const mongoose = require('mongoose');
 
 const employeeSchema = new mongoose.Schema({

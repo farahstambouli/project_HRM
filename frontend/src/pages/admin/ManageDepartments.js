@@ -1,93 +1,4 @@
-// import React, { useState, useEffect } from 'react';
-// import axios from 'axios';
-// import { getToken } from '../../helpers/auth';
-// import '../../styles/ManageDepartments.css'; // Import the CSS file
 
-// const ManageDepartments = () => {
-//   const [departments, setDepartments] = useState([]);
-//   const [name, setName] = useState('');
-//   const [description, setDescription] = useState('');
-
-//   useEffect(() => {
-//     fetchDepartments();
-//   }, []);
-
-//   const fetchDepartments = async () => {
-//     try {
-//       const response = await axios.get('http://localhost:3000/department/allDeparts');
-//       setDepartments(response.data);
-//     } catch (error) {
-//       console.error('Error fetching departments:', error);
-//     }
-//   };
-
-//   const handleAddDepartment = async (e) => {
-//     e.preventDefault();
-//     try {
-//         const newDepartment = { name, description };
-
-//       await axios.post('http://localhost:3000/department/add', newDepartment);
-//       setName('');
-//       setDescription('');
-//       fetchDepartments();
-//     } catch (error) {
-//       console.error('Error adding department:', error);
-//     }
-//   };
-
-//   const handleDeleteDepartment = async (id) => {
-//     try {
-//       await axios.delete(`http://localhost:3000/department/delete/${id}`, {
-//         headers: {
-//           'x-auth-token': getToken(),
-//         }
-//       });
-//       fetchDepartments();
-//     } catch (error) {
-//       console.error('Error deleting department:', error);
-//     }
-//   };
-
-//   return (
-//     <div>
-//       <h2>Manage Departments</h2>
-//       <form onSubmit={handleAddDepartment}>
-//         <div>
-//           <label>Name:</label>
-//           <input
-//             type="text"
-//             value={name}
-//             onChange={(e) => setName(e.target.value)}
-//             required
-//           />
-//           <label>Description:</label>
-//           <input
-//             type="text"
-//             value={description}
-//             onChange={(e) => setDescription(e.target.value)}
-//             required
-//           />
-//         </div>
-//         <button type="submit">Add Department</button>
-//       </form>
-//       <h3>Current Departments</h3>
-//       <ul>
-//         {departments.length > 0 ? (
-//           departments.map((department) => (
-//             <li key={department._id}>
-//               {department.name}
-//               <button onClick={() => handleDeleteDepartment(department._id)} style={{ marginLeft: '10px' }}>Delete</button>
-//             </li>
-//           ))
-//         ) : (
-//           <li>No departments found</li>
-//         )}
-//       </ul>
-//     </div>
-//   );
-// };
-
-// export default ManageDepartments;
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { getToken } from '../../helpers/auth';
@@ -101,7 +12,7 @@ const ManageDepartments = () => {
   useEffect(() => {
     fetchDepartments();
   }, []);
-
+// fonction to fetch the departments
   const fetchDepartments = async () => {
     try {
       const response = await axios.get('http://localhost:3000/department/allDeparts');
@@ -110,7 +21,7 @@ const ManageDepartments = () => {
       console.error('Error fetching departments:', error);
     }
   };
-
+// fonction to add a department
   const handleAddDepartment = async (e) => {
     e.preventDefault();
     try {
@@ -123,7 +34,7 @@ const ManageDepartments = () => {
       console.error('Error adding department:', error);
     }
   };
-
+// fonction to delete a department (not yet implemented but fonctional)
   const handleDeleteDepartment = async (id) => {
     try {
       await axios.delete(`http://localhost:3000/department/delete/${id}`, {
@@ -136,7 +47,7 @@ const ManageDepartments = () => {
       console.error('Error deleting department:', error);
     }
   };
-
+// you need to add a button to handle the delete of a department
   return (
     <div className="container">
     <div className="card manage-card">

@@ -1,11 +1,4 @@
-// export const setLocalStorage =(key,value)=>{
-//     localStorage.setItem(key,JSON.stringify(value))
-//     }
-    
-//     export const getLocalStorage =(key)=>{
-//         return JSON.parse(localStorage.getItem(key))
-//         }
-
+//this file is a locol storage where we store the token for the usrs( admin or manager)
 // helpers/localStorage.js
 
 export const setToken = (token) => {

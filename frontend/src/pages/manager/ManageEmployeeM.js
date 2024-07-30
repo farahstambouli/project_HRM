@@ -1,42 +1,4 @@
 // // src/pages/manager/ManageEmployees.js
-// import React, { useEffect, useState } from 'react';
-// import axios from 'axios';
-// import { useSelector } from 'react-redux';
-
-// const ManageEmployeesM = () => {
-//     const [employees, setEmployees] = useState([]);
-//     const { user } = useSelector((state) => state.auth); // Assuming user details are stored in the auth state
-
-//     useEffect(() => {
-//         const fetchEmployees = async (id) => {
-//             try {
-//                 const response = await axios.get(`http://localhost:3000/getEmployee/${id}/employees`, {
-//                     headers: {
-//                         'x-auth-token': ` ${localStorage.getItem('token')}`, // or however you store your token
-//                     }
-//                 });
-//                 setEmployees(response.data);
-//             } catch (error) {
-//                 console.error('Failed to fetch employees:', error);
-//             }
-//         };
-
-//         fetchEmployees();
-//     }, [user.id]);
-
-//     return (
-//         <div>
-//             <h2>Manage Employees</h2>
-//             <ul>
-//                 {employees.map(employee => (
-//                     <li key={employee.id}>{employee.name} - {employee.position}</li>
-//                 ))}
-//             </ul>
-//         </div>
-//     );
-// };
-
-// export default ManageEmployeesM;
 
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
@@ -80,14 +42,7 @@ const ManageEmployeesM = () => {
   }
 
   return (
-    // <div>
-    //   <h1>Manage Employees</h1>
-    //   <ul>
-    //     {employees.map((employee) => (
-    //       <li key={employee._id}>{employee.name}</li>
-    //     ))}
-    //   </ul>
-    // </div>
+ 
     <div className="manage-employees-container">
     <h1>Manage Employees</h1>
     <ul className="employees-list">

@@ -1,3 +1,4 @@
+//schema for the manager
 // models/Manager.js
 const mongoose = require('mongoose');
 

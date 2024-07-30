@@ -1,4 +1,4 @@
-
+// this navbar shows on the homepage page, about page, and contact page
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Navbar.css'; // Ensure this path is correct

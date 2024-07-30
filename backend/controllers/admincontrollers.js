@@ -1,3 +1,6 @@
+//this is the admin controller where i put mostly the fonctions that will be done by an admin(HR)
+//the fonctions where their is creation of employee account wherent used but can be used down the road for other interface but the functions are fonctional
+// import every dependency we may need
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const dotenv = require('dotenv');

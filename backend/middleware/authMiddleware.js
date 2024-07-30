@@ -1,3 +1,5 @@
+//this is the authorization middleware for the user( admin)
+
 const jwt = require('jsonwebtoken');
 const dotenv = require('dotenv');
 const path = require('path');
