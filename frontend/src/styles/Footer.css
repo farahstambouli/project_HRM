@@ -1,10 +1,4 @@
-/* .footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #333;
-    color: white;
-  }
-   */
+
 
    /* Footer.css */
 
@@ -26,4 +20,21 @@
 
 .footer-content a:hover {
   text-decoration: underline; /* Underline on hover for better UX */
+}
+
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 15px; /* Reduce padding on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 10px; /* Further reduce padding on very small screens */
+  }
+
+  .footer-content p {
+    font-size: 0.875rem; /* Adjust font size for smaller screens */
+  }
 }

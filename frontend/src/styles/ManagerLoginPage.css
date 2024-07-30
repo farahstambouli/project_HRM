@@ -54,3 +54,64 @@
     background-color: #0056b3;
   }
   
+  /* Add these media queries to  ManagerLoginPage.css */
+
+/* Mobile View */
+@media (max-width: 600px) {
+  .manager-login-container {
+    padding: 10px;
+  }
+
+  .manager-login-card {
+    padding: 15px;
+  }
+
+  .manager-login-card h2 {
+    font-size: 1.5em;
+  }
+
+  .manager-login-card button {
+    padding: 12px;
+    font-size: 1em;
+  }
+}
+
+/* Tablet View */
+@media (max-width: 900px) {
+  .manager-login-container {
+    padding: 15px;
+  }
+
+  .manager-login-card {
+    padding: 18px;
+  }
+
+  .manager-login-card h2 {
+    font-size: 1.75em;
+  }
+
+  .manager-login-card button {
+    padding: 14px;
+    font-size: 1.05em;
+  }
+}
+
+/* Desktop View */
+@media (min-width: 901px) {
+  .manager-login-container {
+    padding: 20px;
+  }
+
+  .manager-login-card {
+    padding: 20px;
+  }
+
+  .manager-login-card h2 {
+    font-size: 2em;
+  }
+
+  .manager-login-card button {
+    padding: 15px;
+    font-size: 1.1em;
+  }
+}

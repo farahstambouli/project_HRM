@@ -73,4 +73,63 @@
     width: 80px;
   }
   
+
+  /**responsive /
+  /* Mobile View */
+@media (max-width: 600px) {
+  .manage-reports-container {
+    margin: 10px;
+  }
   
+  .report-form-card, .reports-list-card {
+    width: 100%;
+    margin: 5px 0;
+  }
+  
+  .report-form-card button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+  
+  .reports-list-card li {
+    padding: 8px 0;
+  }
+  
+  .report-item strong {
+    width: 60px;
+  }
+}
+
+/* Tablet View */
+@media (max-width: 900px) {
+  .manage-reports-container {
+    margin: 15px;
+  }
+  
+  .report-form-card, .reports-list-card {
+    width: 90%;
+    margin: 10px 0;
+  }
+  
+  .report-form-card button {
+    padding: 10px 15px;
+    font-size: 15px;
+  }
+}
+
+/* Desktop View */
+@media (min-width: 901px) {
+  .manage-reports-container {
+    margin: 20px;
+  }
+  
+  .report-form-card, .reports-list-card {
+    width: 80%;
+    margin: 10px;
+  }
+  
+  .report-form-card button {
+    padding: 10px 15px;
+    font-size: 16px;
+  }
+}

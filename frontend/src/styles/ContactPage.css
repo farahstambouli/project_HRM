@@ -80,3 +80,30 @@
     text-decoration: underline;
   }
   
+
+
+
+  @media (max-width: 480px) {
+    .contact-card {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    .contact-card h1 {
+      font-size: 1.5em;
+    }
+  
+    .contact-card p {
+      font-size: 1em;
+    }
+  
+    .contact-form input,
+    .contact-form textarea {
+      font-size: 0.9em;
+    }
+  
+    .contact-form input[type="submit"] {
+      font-size: 1em;
+    }
+  }
+  

@@ -42,3 +42,20 @@
     background-color: #0056b3;
   }
   
+
+  @media (max-width: 768px) {
+    .login-card {
+      width: 90%; /* Adjust width for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .login-card {
+      width: 100%; /* Full-width on very small screens */
+    }
+  
+    .login-card button {
+      width: 100%; /* Full-width button on small screens */
+    }
+  }
+  

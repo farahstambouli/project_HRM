@@ -9,3 +9,16 @@
   font-size: 2em;
 }
 
+@media (max-width: 768px) {
+  .hero {
+    height: 200px; /* Adjust height for smaller screens */
+    font-size: 1.5em; /* Smaller font size for better fit */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 150px; /* Further reduce height for very small screens */
+    font-size: 1.2em; /* Smaller font size for very small screens */
+  }
+}

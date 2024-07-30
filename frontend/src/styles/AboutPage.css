@@ -114,3 +114,13 @@
 .contact-section a:hover {
   text-decoration: underline;
 }
+
+/* .team-members {
+  flex-direction: column; }  /* Stack items vertically on small screens */
+
+
+@media (min-width: 600px) {
+  .team-members {
+    flex-direction: row; /* Row layout for larger screens */
+  }
+}

@@ -1,107 +1,4 @@
-/* src/pages/admin/ManageManagers.css
 
-.manager-form {
-    background-color: #f7f7f7;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .manager-form div {
-    margin-bottom: 10px;
-  }
-  
-  .manager-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  .manager-form input,
-  .manager-form select {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .manager-form button {
-    background-color: #5cb85c;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .manager-form button:hover {
-    background-color: #4cae4c;
-  }
-  
-  .managers-list {
-    margin-top: 20px;
-  }
-  
-  .manager-item {
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .manager-item button {
-    background-color: #5bc0de;
-    color: white;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .manager-item button:hover {
-    background-color: #31b0d5;
-  }
-  
-  .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .modal-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: relative;
-  }
-  
-  .close-modal {
-    background-color: #d9534f;
-    color: white;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-  }
-  
-  .close-modal:hover {
-    background-color: #c9302c;
-  } */
-  
 
   /* ManageManagers.css */
 .manager-form {
@@ -248,3 +145,126 @@
     box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2); /* Add a subtle focus shadow */
   }
   
+
+  /* Mobile View */
+@media (max-width: 600px) {
+  .manager-form {
+    padding: 15px;
+    margin: 10px;
+    max-width: 100%;
+  }
+  
+  .manager-form h2 {
+    font-size: 1.2em;
+  }
+  
+  .manager-form input, .manager-form select {
+    font-size: 0.9em;
+  }
+  
+  .manager-form button {
+    padding: 8px 12px;
+    font-size: 0.9em;
+  }
+  
+  .manager-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+  
+  .button-container {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  
+  .update-button, .delete-button {
+    padding: 8px 12px;
+    font-size: 0.9em;
+  }
+  
+  .modal-content {
+    width: 90%;
+    max-width: 400px;
+  }
+}
+
+/* Tablet View */
+@media (max-width: 900px) {
+  .manager-form {
+    padding: 15px;
+    margin: 15px auto;
+    max-width: 80%;
+  }
+  
+  .manager-form h2 {
+    font-size: 1.3em;
+  }
+  
+  .manager-form input, .manager-form select {
+    font-size: 0.95em;
+  }
+  
+  .manager-form button {
+    padding: 10px 15px;
+    font-size: 1em;
+  }
+  
+  .manager-item {
+    flex-direction: row;
+  }
+  
+  .button-container {
+    justify-content: flex-end;
+  }
+  
+  .update-button, .delete-button {
+    padding: 10px 15px;
+    font-size: 1em;
+  }
+  
+  .modal-content {
+    width: 85%;
+    max-width: 450px;
+  }
+}
+
+/* Desktop View */
+@media (min-width: 901px) {
+  .manager-form {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 500px;
+  }
+  
+  .manager-form h2 {
+    font-size: 1.5em;
+  }
+  
+  .manager-form input, .manager-form select {
+    font-size: 1em;
+  }
+  
+  .manager-form button {
+    padding: 10px 15px;
+    font-size: 1em;
+  }
+  
+  .manager-item {
+    flex-direction: row;
+  }
+  
+  .button-container {
+    justify-content: flex-end;
+  }
+  
+  .update-button, .delete-button {
+    padding: 10px 15px;
+    font-size: 1em;
+  }
+  
+  .modal-content {
+    width: 80%;
+    max-width: 500px;
+  }
+}

@@ -131,3 +131,80 @@
     border-radius: 4px;
     cursor: pointer;
   }
+
+    /* Responsive Styles */
+
+/* Mobile View */
+@media (max-width: 600px) {
+  .manage-employees-container {
+      padding: 15px;
+      margin-top: 30px; /* Reduce top margin for mobile */
+  }
+  
+  .manage-employees-container h1 {
+      font-size: 1.5em; /* Smaller heading for mobile */
+  }
+  
+  .loading {
+      font-size: 1.2em; /* Smaller font size for loading message */
+  }
+  
+  .employees-list {
+      max-width: 100%; /* Ensure list takes full width on mobile */
+  }
+  
+  .employee-item {
+      font-size: 1em; /* Smaller font size for employee names */
+      padding: 15px; /* Reduce padding for mobile */
+  }
+}
+
+/* Tablet View */
+@media (max-width: 900px) {
+  .manage-employees-container {
+      padding: 15px;
+      margin-top: 40px; /* Adjust top margin for tablets */
+  }
+  
+  .manage-employees-container h1 {
+      font-size: 1.75em; /* Medium heading for tablets */
+  }
+  
+  .loading {
+      font-size: 1.3em; /* Medium font size for loading message */
+  }
+  
+  .employees-list {
+      max-width: 90%; /* Adjust width for tablets */
+  }
+  
+  .employee-item {
+      font-size: 1.125em; /* Slightly larger font size for tablets */
+      padding: 18px; /* Adjust padding for tablets */
+  }
+}
+
+/* Desktop View */
+@media (min-width: 901px) {
+  .manage-employees-container {
+      padding: 20px;
+      margin-top: 50px; /* Default top margin for desktops */
+  }
+  
+  .manage-employees-container h1 {
+      font-size: 2em; /* Default heading size for desktops */
+  }
+  
+  .loading {
+      font-size: 1.5em; /* Default font size for loading message */
+  }
+  
+  .employees-list {
+      max-width: 800px; /* Default max-width for desktops */
+  }
+  
+  .employee-item {
+      font-size: 1.125em; /* Default font size for employee names */
+      padding: 20px; /* Default padding for items */
+  }
+}

@@ -55,3 +55,65 @@
     background-color: #0056b3;
   }
   
+
+  /* Add these media queries to make RegisterPage.css responsive */
+
+/* Mobile View */
+@media (max-width: 600px) {
+  .register-container {
+    padding: 10px;
+  }
+
+  .register-card {
+    padding: 15px;
+  }
+
+  .register-card h2 {
+    font-size: 1.5em;
+  }
+
+  .register-card button {
+    padding: 12px;
+    font-size: 1em;
+  }
+}
+
+/* Tablet View */
+@media (max-width: 900px) {
+  .register-container {
+    padding: 15px;
+  }
+
+  .register-card {
+    padding: 18px;
+  }
+
+  .register-card h2 {
+    font-size: 1.75em;
+  }
+
+  .register-card button {
+    padding: 14px;
+    font-size: 1.05em;
+  }
+}
+
+/* Desktop View */
+@media (min-width: 901px) {
+  .register-container {
+    padding: 20px;
+  }
+
+  .register-card {
+    padding: 20px;
+  }
+
+  .register-card h2 {
+    font-size: 2em;
+  }
+
+  .register-card button {
+    padding: 15px;
+    font-size: 1.1em;
+  }
+}

@@ -108,3 +108,67 @@
     background-color: #2980b9;
   }
   
+
+
+  /* Mobile View */
+@media (max-width: 600px) {
+  .container {
+      padding: 15px;
+      gap: 15px; /* Adjust gap between cards */
+  }
+  
+  .card {
+      padding: 15px;
+      max-width: 100%; /* Full width on mobile */
+  }
+  
+  .card h2, .card h3 {
+      font-size: 1.25em; /* Smaller headings on mobile */
+  }
+  
+  .manager-form input, .manager-form button {
+      font-size: 0.9em; /* Slightly smaller input and button font size */
+  }
+}
+
+/* Tablet View */
+@media (max-width: 900px) {
+  .container {
+      padding: 15px;
+      gap: 15px; /* Adjust gap for tablets */
+  }
+  
+  .card {
+      padding: 15px;
+      max-width: 90%; /* Adjust width for tablets */
+  }
+  
+  .card h2, .card h3 {
+      font-size: 1.4em; /* Medium headings for tablets */
+  }
+  
+  .manager-form input, .manager-form button {
+      font-size: 0.95em; /* Medium input and button font size */
+  }
+}
+
+/* Desktop View */
+@media (min-width: 901px) {
+  .container {
+      padding: 20px;
+      gap: 20px; /* Default gap between cards */
+  }
+  
+  .card {
+      padding: 20px;
+      max-width: 700px; /* Default card width */
+  }
+  
+  .card h2, .card h3 {
+      font-size: 1.5em; /* Default heading size */
+  }
+  
+  .manager-form input, .manager-form button {
+      font-size: 1em; /* Default input and button font size */
+  }
+}
